@@ -11,7 +11,7 @@ rall = \tweak DynamicText.self-alignment-X #LEFT #(make-dynamic-script
   (markup #:normal-text #:italic "rall."))
 
 subitomp = \tweak DynamicText.self-alignment-X #LEFT #(make-dynamic-script
-  (markup #:normal-text #:italic "subito" #:dynamic "mp"))|
+  (markup #:normal-text #:italic "subito" #:dynamic "mp"))
 
 dynamics = {
   % \global
@@ -20,29 +20,29 @@ dynamics = {
 
   s1\pp  | s1 | 
   s1\crescPoco | s1 |
-  s1\mp |
+  s1-\tweak X-offset #-0.3 -\mp |
   s2 s2\< |
-  s1\mf | s1 | 
+  s1-\tweak X-offset #-0.3 -\mf | s1 | 
   s4.\mf s8\> s2 |
-  s4.\mf s8\> s2 |
+  s4.-\tweak X-offset #-0.5 -\mf s8\> s2 |
   s1\mp | s1 | s1 | s1 | s1 |
   s4 s2\rit |
   s1\mp | s1 | 
   s1\cresc |
   s2\mf s2\< |
-  s1\subitomp |
+  s1-\tweak X-offset #-0.4 -\subitomp |
   s1\cresc |
   s1\mf | s1 | 
-  s4 s4\> s4^"rit." s4\mp |
+  s4 s4\> s4_"rit." s4\mp |
   s2 s2\rall |
-  s1\pp | s1 | 
+  s1-\tweak X-offset #-0.3 -\pp | s1 | 
   s1\crescPoco | s1 |
-  s1\mp |
+  s1-\tweak X-offset #-0.3 -\mp |
   s2 s2\< |
-  s1\mf | s1 | 
+  s1-\tweak X-offset #-0.3 -\mf | s1 | 
   s4.\mf s8\> s2 |
-  s2.\mf s4\mp | s1 | 
+  s2.\mf s4-\tweak Y-offset #0.4 -\mp | s1 | 
   s2 s4.^"rit."\>  s8\p |
-  s2. s4\rit | s1 | 
+  s2. s4-\tweak X-offset #-0.3 -\rit | s1 | 
 %}
 }

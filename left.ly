@@ -29,7 +29,7 @@ left = \relative c'' {
   >> \oneVoice
   <b' d,>2. <cis a d,>4 ~ |
   q2 <g fis cis>2 ~ |
-  q2  r16 <b a d,>8. ~ q4 ~ |
+  q2  r16 <b a d,>8. ~ \once\override Score.Tie.layer = #-2 q4 ~ | \once\override Score.TimeSignature.layer = #-1 \once\override Score.TimeSignature.whiteout = #3
   \time 3/4 q2. | \time 4/4
   
   \bar "||"

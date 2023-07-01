@@ -17,7 +17,7 @@ right = \relative c''' {
   \bar "||"
   \ottava 0
   d16-. d8-. d16 ~ <d fis>8 d16( fis b, d gis, b e, gis d e)  |
-  cis16-. cis8-. cis16  e8( e16 fis \change Staff = "left" \voiceOne b, cis fis, b e, fis cis e  |
+  cis16-. cis8-. cis16  e8\shape #'((0 . 2) (1 . -3) (-2 . 0.7) (0 . 0)) ( e16 fis \change Staff = "left" \voiceOne b, cis fis, b e, fis cis e  |
   
   fis1)\fermata | \change Staff = "right" \oneVoice 
   r4 <d' e a>2 gis8 a | 
