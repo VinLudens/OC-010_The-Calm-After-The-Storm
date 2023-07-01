@@ -6,11 +6,18 @@
   %instrument = "Piano"
   composer = "Kevin L. Biewesch"
   %arranger = "Kevin L. Biewesch"
+  tagline = \markup { \center-column {
+    \with-url #"https://youtube.com/@VinLudens"
+    \line { "Engraving with Lilypond" $(lilypond-version) \char ##x2014 "https://youtube.com/@VinLudens" }
+    \line { \small \italic {  July 06 2019  } }
+  } }
 }
 
 #(set-global-staff-size 18)
 
 \paper {
+  evenHeaderMarkup = \markup { \if \should-print-page-number { \fill-line { "" \fromproperty #'page:page-number-string } } }
+  oddHeaderMarkup = \evenHeaderMarkup
   #(set-paper-size "a4")
 }
 
